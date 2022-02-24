@@ -7,7 +7,7 @@ info:
 servers:
   - url: 'localhost:3000'
 paths:
-  /user:
+  /quizzes:
     get:
       summary: 'Sample endpoint: Returns details about a particular user'
       operationId: listUser
