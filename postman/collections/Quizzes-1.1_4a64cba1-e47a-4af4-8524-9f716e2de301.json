@@ -1,0 +1,151 @@
+{
+    "info": {
+        "_postman_id": "cfd32d73-6664-4b9c-ac5e-81f1859d3219",
+        "name": "Quizzes-1.1",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Sample endpoint: Returns details about a particular user",
+            "id": "fcc8e42b-1179-43cb-bd23-f29f4e541db8",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "{{baseUrl}}/quizzes?id=59057933",
+                    "host": [
+                        "{{baseUrl}}"
+                    ],
+                    "path": [
+                        "quizzes"
+                    ],
+                    "query": [
+                        {
+                            "key": "id",
+                            "value": "59057933",
+                            "description": "(Required) ID of the user"
+                        }
+                    ]
+                }
+            },
+            "response": [
+                {
+                    "id": "0da6faac-05a1-45ca-907a-1a9dddd3d9bb",
+                    "name": "Sample response: Details about a user by ID",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/quizzes?id=59057933",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "quizzes"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "59057933"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "OK",
+                    "code": 200,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "disabled": false,
+                            "description": "A link to the next page of responses",
+                            "key": "x-next",
+                            "value": "magna adipisicing ad proident"
+                        },
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"id\": -86250016,\n  \"name\": \"exercitation fugiat ad\",\n  \"tag\": \"incididunt proident qui\"\n}"
+                },
+                {
+                    "id": "c7af59a3-833d-4e02-ad58-5b827a45eab0",
+                    "name": "Unexpected error",
+                    "originalRequest": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "description": "Added as a part of security scheme: basic",
+                                "key": "Authorization",
+                                "value": "Basic <credentials>"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/quizzes?id=59057933",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "quizzes"
+                            ],
+                            "query": [
+                                {
+                                    "key": "id",
+                                    "value": "59057933"
+                                }
+                            ]
+                        }
+                    },
+                    "status": "Internal Server Error",
+                    "code": 500,
+                    "_postman_previewlanguage": "json",
+                    "header": [
+                        {
+                            "key": "Content-Type",
+                            "value": "application/json"
+                        }
+                    ],
+                    "cookie": [],
+                    "responseTime": null,
+                    "body": "{\n  \"code\": -1184808,\n  \"message\": \"Duis sint non\"\n}"
+                }
+            ]
+        }
+    ],
+    "auth": {
+        "type": "basic",
+        "basic": [
+            {
+                "key": "username",
+                "value": "<Basic Auth Username>",
+                "type": "string"
+            },
+            {
+                "key": "password",
+                "value": "<Basic Auth Password>",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "ecacdfe5-406f-4a17-a04f-875ff5fa75d4",
+            "key": "baseUrl",
+            "value": "localhost:3000",
+            "type": "string"
+        }
+    ]
+}
